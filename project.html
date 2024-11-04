@@ -1,0 +1,2204 @@
+<style>
+    .hero-section {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    .main-content {
+        background-color: #fff;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 1px 0;
+    }
+    
+    @media (max-width: 991px) {
+        .main-content {
+            max-width: 100%;
+        }
+    }
+    
+    .nav-wrapper {
+        z-index: 10;
+        display: flex;
+        width: 100%;
+        padding-left: 29px;
+        flex-direction: column;
+    }
+    
+    @media (max-width: 991px) {
+        .nav-wrapper {
+            max-width: 100%;
+            padding-left: 20px;
+        }
+    }
+    
+    .nav-items {
+        align-self: flex-start;
+        display: flex;
+        align-items: center;
+        gap: 23px;
+        font-family: Inter, sans-serif;
+        flex-wrap: wrap;
+    }
+    
+    .nav-group {
+        align-self: stretch;
+        display: flex;
+        gap: 15px;
+        font-size: 14px;
+        color: #000;
+        font-weight: 500;
+        line-height: 1;
+        margin: auto 0;
+    }
+    
+    .nav-link {
+        flex-grow: 1;
+    }
+    
+    .nav-icon {
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
+        width: 20px;
+        align-self: flex-start;
+    }
+    
+    .about-link {
+        align-self: stretch;
+        display: flex;
+        gap: 11px;
+        font-size: 14px;
+        color: #000;
+        font-weight: 500;
+        line-height: 1;
+        margin: auto 0;
+    }
+    
+    .nav-end {
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        gap: 40px 100px;
+    }
+    
+    @media (max-width: 991px) {
+        .nav-end {
+            max-width: 100%;
+        }
+    }
+    
+    .blog-link {
+        color: #000;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1;
+        align-self: stretch;
+        margin: auto 0;
+    }
+    
+    .logo {
+        aspect-ratio: 2.45;
+        object-fit: contain;
+        object-position: center;
+        width: 184px;
+        align-self: stretch;
+        max-width: 100%;
+    }
+    
+    .cta-button {
+        border-radius: 24px;
+        background-color: #0860d6;
+        align-self: stretch;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 400;
+        line-height: 1.2;
+        margin: auto 0;
+        padding: 6px 16px;
+    }
+    
+    .hero-content {
+        align-self: flex-end;
+        margin-top: 96px;
+        width: 100%;
+        max-width: 979px;
+    }
+    
+    @media (max-width: 991px) {
+        .hero-content {
+            max-width: 100%;
+            margin-top: 40px;
+        }
+    }
+    
+    .hero-columns {
+        gap: 20px;
+        display: flex;
+    }
+    
+    @media (max-width: 991px) {
+        .hero-columns {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
+        }
+    }
+    
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: 83%;
+        margin-left: 0;
+    }
+    
+    @media (max-width: 991px) {
+        .hero-text {
+            width: 100%;
+        }
+    }
+    
+    .hero-text-content {
+        display: flex;
+        margin-top: 57px;
+        flex-direction: column;
+        align-items: center;
+        color: #3b4d6f;
+        font: 400 17px/32px Inter, sans-serif;
+    }
+    
+    @media (max-width: 991px) {
+        .hero-text-content {
+            max-width: 100%;
+            margin-top: 40px;
+        }
+    }
+    
+    .hero-title {
+        color: #000;
+        font-size: 70px;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -2.1px;
+    }
+    
+    @media (max-width: 991px) {
+        .hero-title {
+            max-width: 100%;
+            font-size: 40px;
+        }
+    }
+    
+    .hero-subtitle {
+        margin-top: 23px;
+    }
+    
+    @media (max-width: 991px) {
+        .hero-subtitle {
+            max-width: 100%;
+        }
+    }
+    
+    .hero-description {
+        align-self: stretch;
+        margin: 0 16px 0 28px;
+    }
+    
+    @media (max-width: 991px) {
+        .hero-description {
+            max-width: 100%;
+            margin-right: 10px;
+        }
+    }
+    
+    .hero-cta {
+        border-radius: 24px;
+        background-color: #000b6d;
+        display: flex;
+        margin-top: 63px;
+        width: 141px;
+        max-width: 100%;
+        flex-direction: column;
+        overflow: hidden;
+        font-size: 16px;
+        color: #fff;
+        line-height: 1.2;
+    }
+    
+    @media (max-width: 991px) {
+        .hero-cta {
+            margin-top: 40px;
+        }
+    }
+    
+    .hero-cta-text {
+        border-radius: 24px;
+        background-color: #0860d6;
+        padding: 6px 14px;
+    }
+    
+    @media (max-width: 991px) {
+        .hero-cta-text {
+            padding-right: 20px;
+        }
+    }
+    
+    .hero-image {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: 17%;
+        margin-left: 20px;
+    }
+    
+    @media (max-width: 991px) {
+        .hero-image {
+            width: 100%;
+        }
+    }
+    
+    .hero-img {
+        aspect-ratio: 0.28;
+        object-fit: contain;
+        object-position: center;
+        width: 148px;
+        max-width: 100%;
+        flex-grow: 1;
+    }
+    
+    @media (max-width: 991px) {
+        .hero-img {
+            margin-top: 40px;
+        }
+    }
+    
+    .divider {
+        background-color: #fff;
+        display: flex;
+        margin-top: -23px;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        padding: 99px 0;
+    }
+    
+    @media (max-width: 991px) {
+        .divider {
+            max-width: 100%;
+            padding-right: 20px;
+        }
+    }
+    
+    .divider-img {
+        aspect-ratio: 18.52;
+        object-fit: contain;
+        object-position: center;
+        width: 1190px;
+    }
+    
+    @media (max-width: 991px) {
+        .divider-img {
+            max-width: 100%;
+        }
+    }
+    
+    .method-section {
+        background-color: #001640;
+        z-index: 10;
+        display: flex;
+        margin-top: -109px;
+        width: 100%;
+        padding-bottom: 200px;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: center;
+        font-family: Inter, sans-serif;
+        color: #fff;
+    }
+    
+    @media (max-width: 991px) {
+        .method-section {
+            max-width: 100%;
+            padding-bottom: 100px;
+        }
+    }
+    
+    .method-header {
+        align-self: stretch;
+        display: flex;
+        width: 100%;
+        padding-bottom: 19px;
+        flex-direction: column;
+        font-size: 16px;
+        color: #51cbf3;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2.56px;
+        line-height: 1.1;
+    }
+    
+    @media (max-width: 991px) {
+        .method-header {
+            max-width: 100%;
+        }
+    }
+    
+    .method-header-bg {
+        background-color: #001640;
+        display: flex;
+        min-height: 110px;
+        width: 100%;
+    }
+    
+    @media (max-width: 991px) {
+        .method-header-bg {
+            max-width: 100%;
+        }
+    }
+    
+    .method-title {
+        align-self: center;
+        margin-top: 23px;
+    }
+    
+    .method-subtitle {
+        text-shadow: 0 4px 40px rgba(81, 203, 243, 0.5);
+        font-size: 55px;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -1.1px;
+        z-index: 10;
+        margin-top: -11px;
+    }
+    
+    @media (max-width: 991px) {
+        .method-subtitle {
+            max-width: 100%;
+            font-size: 40px;
+        }
+    }
+    
+    .method-cards {
+        display: flex;
+        min-height: 20px;
+        width: 672px;
+        max-width: 100%;
+        align-items: flex-start;
+        gap: 16px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 56px 0 -47px;
+    }
+    
+    @media (max-width: 991px) {
+        .method-cards {
+            margin: 40px 0 10px;
+        }
+    }
+    
+    .method-card {
+        border-radius: 16px;
+        background-color: rgba(255, 255, 255, 0.002);
+        box-shadow: 0 -8px 70px rgba(81, 203, 243, 0.5);
+        display: flex;
+        min-width: 240px;
+        flex-direction: column;
+        overflow: hidden;
+        flex-grow: 1;
+        width: 262px;
+    }
+    
+    .method-card-inner {
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2px;
+    }
+    
+    .method-card-content {
+        border-radius: 14px;
+        background-color: #002351;
+        display: flex;
+        padding-bottom: 32px;
+        flex-direction: column;
+    }
+    
+    .method-card-body {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        aspect-ratio: 0.671;
+        width: 100%;
+        padding: 32px 26px 0;
+    }
+    
+    @media (max-width: 991px) {
+        .method-card-body {
+            padding: 0 20px;
+        }
+    }
+    
+    .method-card-bg {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .method-card-icon {
+        aspect-ratio: 0.95;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+    }
+    
+    @media (max-width: 991px) {
+        .method-card-icon {
+            margin-right: 6px;
+        }
+    }
+    
+    .method-card-title {
+        position: relative;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -0.44px;
+        align-self: flex-start;
+        margin-top: 15px;
+    }
+    
+    .method-card-text {
+        position: relative;
+        margin-top: 13px;
+        min-height: 135px;
+        padding-bottom: 1567px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 27px;
+    }
+    
+    @media (max-width: 991px) {
+        .method-card-text {
+            padding-bottom: 100px;
+        }
+    }
+    
+    .expertise-section {
+        background-color: #fff;
+        z-index: 10;
+        display: flex;
+        margin-top: -113px;
+        width: 100%;
+        padding-bottom: 259px;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    @media (max-width: 991px) {
+        .expertise-section {
+            max-width: 100%;
+            padding-bottom: 100px;
+        }
+    }
+    
+    .expertise-bg {
+        background-color: #fff;
+        display: flex;
+        min-height: 170px;
+        width: 100%;
+    }
+    
+    @media (max-width: 991px) {
+        .expertise-bg {
+            max-width: 100%;
+        }
+    }
+    
+    .expertise-content {
+        align-self: flex-start;
+        z-index: 10;
+        display: flex;
+        height: 817px;
+        padding-left: 60px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: -60px 0 -52px;
+    }
+    
+    @media (max-width: 991px) {
+        .expertise-content {
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+    }
+    
+    .expertise-left {
+        display: flex;
+        min-width: 240px;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 560px;
+        padding: 0 31px 2007px 0;
+    }
+    
+    @media (max-width: 991px) {
+        .expertise-left {
+            max-width: 100%;
+            padding-bottom: 100px;
+        }
+    }
+    
+    .expertise-intro {
+        display: flex;
+        height: 217px;
+        max-width: 100%;
+        width: 528px;
+        padding-bottom: 1831px;
+        flex-direction: column;
+        font-family: Inter, sans-serif;
+        justify-content: flex-start;
+    }
+    
+    @media (max-width: 991px) {
+        .expertise-intro {
+            padding-bottom: 100px;
+        }
+    }
+    
+    .expertise-brand {
+        color: #2f80ed;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 0.7;
+        letter-spacing: 2.56px;
+        text-transform: uppercase;
+    }
+    
+    .expertise-title {
+        margin-top: 9px;
+        width: 100%;
+        padding-bottom: 1985px;
+        font-size: 55px;
+        color: #000b6d;
+        font-weight: 800;
+        letter-spacing: -1.1px;
+        line-height: 64px;
+    }
+    
+    @media (max-width: 991px) {
+        .expertise-title {
+            max-width: 100%;
+            font-size: 40px;
+            line-height: 51px;
+            padding-bottom: 100px;
+        }
+    }
+    
+    .expertise-image-list {
+        display: flex;
+        margin-top: 56px;
+        max-width: 100%;
+        width: 529px;
+        flex-direction: column;
+    }
+    
+    @media (max-width: 991px) {
+        .expertise-image-list {
+            margin-top: 40px;
+        }
+    }
+    
+    .expertise-image {
+        aspect-ratio: 0.97;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+        z-index: 10;
+        margin-bottom: -20px;
+    }
+    
+    @media (max-width: 991px) {
+        .expertise-image {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+    
+    .expertise-list {
+        display: flex;
+        min-width: 240px;
+        min-height: 817px;
+        padding-bottom: 1906px;
+        flex-direction: column;
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+        justify-content: flex-start;
+        width: 560px;
+    }
+    
+    @media (max-width: 991px) {
+        .expertise-list {
+            max-width: 100%;
+            padding-bottom: 100px;
+        }
+    }
+    
+    .expertise-item {
+        border-radius: 10px;
+        background-color: #f5f7fa;
+        display: flex;
+        min-height: 149px;
+        max-width: 100%;
+        width: 560px;
+        align-items: flex-start;
+        gap: 24px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding: 16px;
+    }
+    
+    .expertise-icon {
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
+        width: 48px;
+    }
+    
+    .expertise-item-content {
+        display: flex;
+        min-width: 240px;
+        padding-bottom: 7px;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-grow: 1;
+        width: 446px;
+    }
+    
+    @media (max-width: 991px) {
+        .expertise-item-content {
+            max-width: 100%;
+        }
+    }
+    
+    .expertise-item-title {
+        color: #000b6d;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -0.4px;
+        z-index: 10;
+    }
+    
+    .expertise-item-text {
+        align-self: stretch;
+        margin-top: 8px;
+        min-height: 54px;
+        padding-bottom: 2043px;
+        font-size: 14px;
+        color: #3b4d6f;
+        line-height: 27px;
+    }
+    
+    @media (max-width: 991px) {
+        .expertise-item-text {
+            max-width: 100%;
+            padding-bottom: 100px;
+        }
+    }
+    
+    .expertise-item-link {
+        color: #000;
+        font-size: 16px;
+        line-height: 1.2;
+        margin-top: 5px;
+    }
+    
+    .welcome-section {
+        background-color: #fff;
+        z-index: 10;
+        display: flex;
+        margin-top: -107px;
+        width: 100%;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 90px 0 217px 60px;
+    }
+    
+    <style>@media (max-width: 991px) {
+        .welcome-section {
+            max-width: 100%;
+            padding: 0 0 100px 20px;
+        }
+    }
+    
+    .welcome-intro {
+        display: flex;
+        height: 153px;
+        width: 560px;
+        max-width: 100%;
+        padding-bottom: 2862px;
+        flex-direction: column;
+        font-family: Inter, sans-serif;
+        font-weight: 800;
+        justify-content: flex-start;
+    }
+    
+    @media (max-width: 991px) {
+        .welcome-intro {
+            padding-bottom: 100px;
+        }
+    }
+    
+    .welcome-subtitle {
+        color: #2f80ed;
+        font-size: 16px;
+        line-height: 1.1;
+        letter-spacing: 2.56px;
+        text-transform: uppercase;
+    }
+    
+    .welcome-title {
+        display: flex;
+        margin-top: 9px;
+        height: 128px;
+        width: 100%;
+        flex-direction: column;
+        font-size: 55px;
+        color: #000b6d;
+        letter-spacing: -1.1px;
+        line-height: 1;
+        justify-content: flex-start;
+        padding: 0 48px 2952px 0;
+    }
+    
+    @media (max-width: 991px) {
+        .welcome-title {
+            font-size: 40px;
+            padding: 0 20px 100px 0;
+        }
+    }
+    
+    .welcome-content {
+        margin: 55px 0 -43px;
+    }
+    
+    @media (max-width: 991px) {
+        .welcome-content {
+            max-width: 100%;
+            margin: 40px 0 10px;
+        }
+    }
+    
+    .welcome-columns {
+        gap: 20px;
+        display: flex;
+    }
+    
+    @media (max-width: 991px) {
+        .welcome-columns {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
+        }
+    }
+    
+    .welcome-column {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: 23%;
+        margin-left: 0;
+    }
+    
+    @media (max-width: 991px) {
+        .welcome-column {
+            width: 100%;
+        }
+    }
+    
+    .welcome-text {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        color: #3b4d6f;
+        font: 400 14px/27px Inter, sans-serif;
+    }
+    
+    @media (max-width: 991px) {
+        .welcome-text {
+            margin-top: 40px;
+        }
+    }
+    
+    .welcome-stat {
+        display: flex;
+        gap: 11px;
+    }
+    
+    @media (max-width: 991px) {
+        .welcome-stat {
+            margin-right: 7px;
+        }
+    }
+    
+    .stat-dot {
+        border-radius: 50px;
+        background-color: #0860d6;
+        align-self: flex-start;
+        display: flex;
+        margin-top: 29px;
+        width: 8px;
+        height: 8px;
+    }
+    
+    .stat-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 241px;
+        max-width: 100%;
+    }
+    
+    .stat-number {
+        color: #000;
+        font-size: 55px;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -1.1px;
+    }
+    
+    @media (max-width: 991px) {
+        .stat-number {
+            font-size: 40px;
+        }
+    }
+    
+    .stat-label {
+        color: #000b6d;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -0.46px;
+        margin-top: 4px;
+    }
+    
+    .stat-description {
+        align-self: stretch;
+        margin-top: 8px;
+    }
+    
+    .stat-detail {
+        align-self: stretch;
+        width: 100%;
+        margin: 27px 23px 0 0;
+    }
+    
+    @media (max-width: 991px) {
+        .stat-detail {
+            margin-right: 10px;
+        }
+    }
+    
+    .welcome-image-column {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: 77%;
+        margin-left: 20px;
+    }
+    
+    @media (max-width: 991px) {
+        .welcome-image-column {
+            width: 100%;
+        }
+    }
+    
+    .welcome-image-content {
+        display: flex;
+        margin-top: 183px;
+        width: 100%;
+        flex-direction: column;
+        font-family: Inter, sans-serif;
+    }
+    
+    @media (max-width: 991px) {
+        .welcome-image-content {
+            max-width: 100%;
+            margin-top: 40px;
+        }
+    }
+    
+    .welcome-image-header {
+        align-self: flex-start;
+        z-index: 10;
+        display: flex;
+        margin-left: 18px;
+        gap: 11px;
+        font-size: 55px;
+        color: #000;
+        font-weight: 800;
+        white-space: nowrap;
+        letter-spacing: -1.1px;
+        line-height: 1;
+    }
+    
+    @media (max-width: 991px) {
+        .welcome-image-header {
+            margin-left: 10px;
+            font-size: 40px;
+            white-space: initial;
+        }
+    }
+    
+    .welcome-image-dot {
+        border-radius: 50px;
+        background-color: #0860d6;
+        display: flex;
+        width: 8px;
+        height: 8px;
+        margin: auto 0;
+    }
+    
+    .welcome-image-text {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        min-height: 449px;
+        width: 100%;
+        align-items: flex-start;
+        font-size: 14px;
+        color: #3b4d6f;
+        font-weight: 400;
+        line-height: 27px;
+        padding: 6px 80px 192px 39px;
+    }
+    
+    @media (max-width: 991px) {
+        .welcome-image-text {
+            max-width: 100%;
+            padding: 0 20px 100px;
+        }
+    }
+    
+    .welcome-image-bg {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .welcome-image-title {
+        position: relative;
+        color: #000b6d;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -0.46px;
+    }
+    
+    .welcome-image-description {
+        position: relative;
+        margin-top: 8px;
+    }
+    
+    .welcome-image-detail {
+        position: relative;
+        width: 260px;
+        margin: 27px 0 -38px;
+    }
+    
+    @media (max-width: 991px) {
+        .welcome-image-detail {
+            margin-bottom: 10px;
+        }
+    }
+    
+    .industries-section {
+        background-color: #fff;
+        width: 100%;
+        overflow: hidden;
+        padding: 42px 80px 163px 32px;
+    }
+    
+    @media (max-width: 991px) {
+        .industries-section {
+            max-width: 100%;
+            padding: 0 20px 100px;
+        }
+    }
+    
+    .industries-content {
+        gap: 20px;
+        display: flex;
+    }
+    
+    @media (max-width: 991px) {
+        .industries-content {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
+        }
+    }
+    
+    .industries-image {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: 50%;
+        margin-left: 0;
+    }
+    
+    @media (max-width: 991px) {
+        .industries-image {
+            width: 100%;
+        }
+    }
+    
+    .industries-img {
+        aspect-ratio: 1.19;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+        flex-grow: 1;
+    }
+    
+    @media (max-width: 991px) {
+        .industries-img {
+            max-width: 100%;
+            margin-top: 40px;
+        }
+    }
+    
+    .industries-text {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: 50%;
+        margin-left: 20px;
+    }
+    
+    @media (max-width: 991px) {
+        .industries-text {
+            width: 100%;
+        }
+    }
+    
+    .industries-intro {
+        display: flex;
+        margin-top: 63px;
+        min-height: 313px;
+        padding-bottom: 4039px;
+        flex-direction: column;
+        color: #3b4d6f;
+        justify-content: flex-start;
+        font: 400 17px/32px Inter, sans-serif;
+    }
+    
+    @media (max-width: 991px) {
+        .industries-intro {
+            max-width: 100%;
+            margin-top: 40px;
+            padding-bottom: 100px;
+        }
+    }
+    
+    .industries-title-wrapper {
+        display: flex;
+        height: 191px;
+        max-width: 100%;
+        width: 547px;
+        padding-bottom: 4072px;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    @media (max-width: 991px) {
+        .industries-title-wrapper {
+            padding-bottom: 100px;
+        }
+    }
+    
+    .industries-title {
+        color: #000b6d;
+        font-size: 55px;
+        font-weight: 800;
+        line-height: 64px;
+        letter-spacing: -1.1px;
+    }
+    
+    @media (max-width: 991px) {
+        .industries-title {
+            max-width: 100%;
+            font-size: 40px;
+            line-height: 51px;
+        }
+    }
+    
+    .industries-subtitle {}
+    
+    @media (max-width: 991px) {
+        .industries-subtitle {
+            max-width: 100%;
+        }
+    }
+    
+    .industries-description {}
+    
+    @media (max-width: 991px) {
+        .industries-description {
+            max-width: 100%;
+        }
+    }
+    
+    .case-studies-section {
+        background-color: #fff;
+        z-index: 10;
+        display: flex;
+        margin-top: -94px;
+        width: 100%;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: center;
+        padding: 75px 61px 170px;
+    }
+    
+    @media (max-width: 991px) {
+        .case-studies-section {
+            max-width: 100%;
+            padding: 0 20px 100px;
+        }
+    }
+    
+    .case-studies-title {
+        color: #000b6d;
+        letter-spacing: -0.68px;
+        font: 800 34px/1 Inter, sans-serif;
+    }
+    
+    @media (max-width: 991px) {
+        .case-studies-title {
+            max-width: 100%;
+        }
+    }
+    
+    .case-studies-list {
+        align-self: stretch;
+        display: flex;
+        margin-top: 56px;
+        min-height: 451px;
+        align-items: flex-start;
+        gap: 32px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    
+    @media (max-width: 991px) {
+        .case-studies-list {
+            margin-top: 40px;
+        }
+    }
+    
+    .case-study-card {
+        border-radius: 12px;
+        box-shadow: 8px 8px 28px rgba(0, 22, 64, 0.12);
+        display: flex;
+        min-width: 240px;
+        flex-direction: column;
+        overflow: hidden;
+        justify-content: center;
+        flex-grow: 1;
+        width: 282px;
+        padding: 2px;
+    }
+    
+    .case-study-content {
+        border-radius: 10px;
+        background-color: #fff;
+        display: flex;
+        min-height: 446px;
+        padding-bottom: 4507px;
+        flex-direction: column;
+        overflow: hidden;
+        justify-content: flex-start;
+    }
+    
+    @media (max-width: 991px) {
+        .case-study-content {
+            padding-bottom: 100px;
+        }
+    }
+    
+    .case-study-image-wrapper {
+        display: flex;
+        max-width: 100%;
+        width: 348px;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1px;
+    }
+    
+    .case-study-image {
+        aspect-ratio: 2.08;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+    }
+    
+    .case-study-text {
+        display: flex;
+        max-width: 100%;
+        width: 348px;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: Inter, sans-serif;
+        color: #3b4d6f;
+        font-weight: 700;
+        padding: 27px 28px;
+    }
+    
+    @media (max-width: 991px) {
+        .case-study-text {
+            padding: 0 20px;
+        }
+    }
+    
+    .case-study-tag {
+        border-radius: 4px;
+        display: flex;
+        width: 112px;
+        max-width: 100%;
+        flex-direction: column;
+        font-size: 9px;
+        line-height: 1.3;
+        justify-content: center;
+        padding: 2px 1px;
+    }
+    
+    .case-study-tag-content {
+        border-radius: 2px;
+        background-color: #fff;
+        overflow: hidden;
+        padding: 8px;
+    }
+    
+    .case-study-title {
+        font-size: 23px;
+        line-height: 1;
+        letter-spacing: -0.46px;
+        margin-top: 16px;
+    }
+    
+    .case-study-description {
+        align-self: stretch;
+        margin-top: 16px;
+        height: 108px;
+        padding-bottom: 4993px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 27px;
+    }
+    
+    @media (max-width: 991px) {
+        .case-study-description {
+            padding-bottom: 100px;
+        }
+    }
+    
+    .case-study-link {
+        color: #000;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.2;
+        margin-top: 6px;
+    }
+    
+    .see-more-button {
+        border-radius: 24px;
+        width: 130px;
+        max-width: 100%;
+        color: #fff;
+        margin: 48px 0 -34px;
+        padding: 6px 16px;
+        font: 400 16px/1.2 Inter, sans-serif;
+    }
+    
+    @media (max-width: 991px) {
+        .see-more-button {
+            padding-right: 20px;
+            margin: 40px 0 10px;
+        }
+    }
+    
+    .contact-section {
+        background-color: #fff;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    @media (max-width: 991px) {
+        .contact-section {
+            max-width: 100%;
+        }
+    }
+    
+    .contact-content {
+        width: 100%;
+        padding: 57px 68px 167px;
+    }
+    
+    @media (max-width: 991px) {
+        .contact-content {
+            max-width: 100%;
+            padding: 0 20px 100px;
+        }
+    }
+    
+    .contact-columns {
+        gap: 20px;
+        display: flex;
+    }
+    
+    @media (max-width: 991px) {
+        .contact-columns {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
+        }
+    }
+    
+    .contact-text {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: 60%;
+        margin-left: 0;
+    }
+    
+    @media (max-width: 991px) {
+        .contact-text {
+            width: 100%;
+        }
+    }
+    
+    .contact-text-content {
+        display: flex;
+        margin-top: 82px;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: Inter, sans-serif;
+        color: #000b6d;
+        font-weight: 800;
+    }
+    
+    @media (max-width: 991px) {
+        .contact-text-content {
+            max-width: 100%;
+            margin: 40px -7px 0 0;
+        }
+    }
+    
+    .contact-title {
+        font-size: 55px;
+        line-height: 1;
+        letter-spacing: -1.1px;
+    }
+    
+    @media (max-width: 991px) {
+        .contact-title {
+            font-size: 40px;
+        }
+    }
+    
+    .contact-list {
+        align-self: stretch;
+        display: flex;
+        margin-top: 48px;
+        min-height: 40px;
+        padding-right: 56px;
+        align-items: flex-start;
+        gap: 20px;
+        font-size: 28px;
+        white-space: nowrap;
+        line-height: 1.3;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    
+    @media (max-width: 991px) {
+        .contact-list {
+            max-width: 100%;
+            padding-right: 20px;
+            margin-top: 40px;
+            white-space: initial;
+        }
+    }
+    
+    .contact-list-item {
+        width: 135px;
+        padding: 2px 1px;
+    }
+    
+    @media (max-width: 991px) {
+        .contact-list-item {
+            padding-right: 20px;
+            white-space: initial;
+        }
+    }
+    
+    .contact-button {
+        border-radius: 24px;
+        background-color: #0860d6;
+        margin-top: 48px;
+        width: 141px;
+        max-width: 100%;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 400;
+        line-height: 1.2;
+        padding: 6px 16px;
+    }
+    
+    @media (max-width: 991px) {
+        .contact-button {
+            padding-right: 20px;
+            margin-top: 40px;
+        }
+    }
+    
+    .contact-image {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: 40%;
+        margin-left: 20px;
+    }
+    
+    @media (max-width: 991px) {
+        .contact-image {
+            width: 100%;
+        }
+    }
+    
+    .contact-img {
+        aspect-ratio: 1.19;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+        flex-grow: 1;
+    }
+    
+    @media (max-width: 991px) {
+        .contact-img {
+            max-width: 100%;
+            margin-top: 40px;
+        }
+    }
+    
+    .footer {
+        background-color: #001640;
+        z-index: 10;
+        display: flex;
+        margin-top: -105px;
+        width: 100%;
+        padding-bottom: 188px;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    @media (max-width: 991px) {
+        .footer {
+            max-width: 100%;
+            padding-bottom: 100px;
+        }
+    }
+    
+    .footer-top {
+        display: flex;
+        width: 100%;
+        padding-bottom: 60px;
+        flex-direction: column;
+    }
+    
+    @media (max-width: 991px) {
+        .footer-top {
+            max-width: 100%;
+        }
+    }
+    
+    .footer-bg {
+        background-color: #001640;
+        display: flex;
+        min-height: 110px;
+        width: 100%;
+    }
+    
+    @media (max-width: 991px) {
+        .footer-bg {
+            max-width: 100%;
+        }
+    }
+    
+    .footer-content {
+        z-index: 10;
+        display: flex;
+        min-height: 797px;
+        width: 100%;
+        max-width: 1240px;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: -59px 40px 0 0;
+        padding: 0 60px 5938px;
+    }
+    
+    @media (max-width: 991px) {
+        .footer-content {
+            max-width: 100%;
+            margin-right: 10px;
+            padding: 0 20px 100px;
+        }
+    }
+    
+    .footer-grid {
+        display: flex;
+        width: 100%;
+        max-width: 1120px;
+        padding-bottom: 13px;
+        flex-direction: column;
+    }
+    
+    @media (max-width: 991px) {
+        .footer-grid {
+            max-width: 100%;
+        }
+    }
+    
+    .footer-row {}
+    
+    @media (max-width: 991px) {
+        .footer-row {
+            max-width: 100%;
+        }
+    }
+    
+    .footer-columns {
+        gap: 20px;
+        display: flex;
+    }
+    
+    @media (max-width: 991px) {
+        .footer-columns {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
+        }
+    }
+    
+    .footer-column {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: 25%;
+        margin-left: 0;
+    }
+    
+    @media (max-width: 991px) {
+        .footer-column {
+            width: 100%;
+        }
+    }
+    
+    .footer-menu {
+        display: flex;
+        height: 250px;
+        flex-grow: 1;
+        flex-direction: column;
+        font-family: Inter, sans-serif;
+        color: #fff;
+        justify-content: flex-start;
+        padding: 7px 16px 0;
+    }
+    
+    .footer-menu-title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -0.4px;
+    }
+    
+    .footer-menu-list {
+        display: flex;
+        margin-top: 9px;
+        min-height: 211px;
+        max-width: 100%;
+        width: 248px;
+        flex-direction: column;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.2;
+        justify-content: flex-start;
+        padding: 8px 50px 76px 0;
+    }
+    
+    @media (max-width: 991px) {
+        .footer-menu-list {
+            padding-right: 20px;
+        }
+    }
+    
+    .footer-menu-item {
+        margin-top: 16px;
+    }
+    
+    .footer-newsletter {
+        display: flex;
+        min-height: 250px;
+        flex-grow: 1;
+        flex-direction: column;
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+        justify-content: flex-start;
+        padding: 0 16px 6214px;
+    }
+    
+    @media (max-width: 991px) {
+        .footer-newsletter {
+            padding-bottom: 100px;
+        }
+    }
+    
+    .footer-newsletter-title {
+        color: #fff;
+        font-size: 15px;
+        line-height: 1;
+    }
+    
+    .footer-newsletter-form {
+        border-radius: 0;
+        display: flex;
+        margin-top: 21px;
+        width: 100%;
+        max-width: 248px;
+        flex-direction: column;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.5);
+        white-space: nowrap;
+        line-height: 24px;
+    }
+    
+    @media (max-width: 991px) {
+        .footer-newsletter-form {
+            white-space: initial;
+        }
+    }
+    
+    .footer-newsletter-input {
+        border-radius: 4px;
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        padding: 5px 5px 5px 12px;
+        border: 1px solid #9dacc9;
+    }
+    
+    @media (max-width: 991px) {
+        .footer-newsletter-input {
+            white-space: initial;
+        }
+    }
+    
+    .footer-newsletter-placeholder {
+        margin: auto 0;
+    }
+    
+    .footer-newsletter-button {
+        aspect-ratio: 1.41;
+        object-fit: contain;
+        object-position: center;
+        width: 45px;
+    }
+    
+    .footer-locations {
+        align-self: center;
+        display: flex;
+        height: 13px;
+        width: 822px;
+        max-width: 100%;
+        align-items: flex-start;
+        gap: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 1.6px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 141px 0 0 13px;
+        padding: 0 224px 0 227px;
+        font: 500 10px/1 Inter, sans-serif;
+    }
+    
+    @media (max-width: 991px) {
+        .footer-locations {
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+    }
+    
+    .footer-bottom {
+        border-radius: 0;
+        display: flex;
+        margin-top: 48px;
+        width: 1088px;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        color: #fff;
+        justify-content: center;
+        padding: 3px 0;
+        font: 400 12px/1.2 Inter, sans-serif;
+    }
+    
+    @media (max-width: 991px) {
+        .footer-bottom {
+            padding-right: 20px;
+            margin-top: 40px;
+        }
+    }
+    
+    .footer-links {
+        display: flex;
+        min-height: 22px;
+        align-items: flex-start;
+        gap: 40px;
+        justify-content: flex-start;
+        padding: 4px 0;
+    }
+    
+    .footer-logo {
+        aspect-ratio: 2.68;
+        object-fit: contain;
+        object-position: center;
+        width: 134px;
+        z-index: 10;
+        max-width: 100%;
+        margin: -128px 0 -38px 60px;
+    }
+    
+    @media (max-width: 991px) {
+        .footer-logo {
+            margin: 0 0 10px 10px;
+        }
+    }
+</style>
+
+<header class="hero-section">
+    <nav class="nav-wrapper">
+        <div class="nav-items">
+            <div class="nav-group">
+                <a href="#" class="nav-link">Expertise</a>
+                <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/a8086e2d93193062984630f1fcc761e7514c813b6e50b94135ddc8eab593e648?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="nav-icon" />
+                <a href="#" class="nav-link">Industries</a>
+                <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/a2fd6d0010b9daa6df66d8f4f0c06d76e50ba5373e5ef422bc12e51b7d930214?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="nav-icon" />
+            </div>
+            <div class="about-link">
+                <a href="#" class="nav-link">About</a>
+                <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/0785df538b72d071d06581d02f6cf0c98b9df022ecb4f83c0392e73d5eb818d2?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="nav-icon" />
+            </div>
+            <div class="nav-end">
+                <a href="#" class="blog-link">Blog</a>
+                <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/5392c66e650e7261e873625ecbe0241bc83954f8b6579817a3b1e49fa72d3dad?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="logo" />
+                <a href="#" class="cta-button">Contact us</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-content">
+        <div class="hero-columns">
+            <div class="hero-text">
+                <div class="hero-text-content">
+                    <h1 class="hero-title">Elevating Brands</h1>
+                    <p class="hero-subtitle">You want to elevate your brand with meaningful content, but many agencies</p>
+                    <p class="hero-description">offer generic solutions. <strong>Content Forge</strong> is different, we provide personalized,</p>
+                    <p class="hero-description">data-driven strategies, tailored to your needs, to amplify your message and drive growth</p>
+                    <a href="#" class="hero-cta">
+                        <span class="hero-cta-text">Contact us</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/ca2beef9ea790a5669899633e2d5b6f8d1abe37e68befeb1f6ae5dff19788842?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="hero-img" />
+            </div>
+        </div>
+    </div>
+
+    <div class="divider">
+        <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/689f77fd8443661f4d670cfe5bf6594ae86b83d7183ca525ff9ff381005bb166?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="divider-img" />
+    </div>
+</header>
+
+<section class="method-section">
+    <div class="method-header">
+        <div class="method-header-bg"></div>
+        <h2 class="method-title">Our Method</h2>
+    </div>
+    <p class="method-subtitle">Precise data for lasting impact</p>
+
+    <div class="method-cards">
+        <div class="method-card">
+            <div class="method-card-inner">
+                <div class="method-card-content">
+                    <div class="method-card-body">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/085fa93108bad600b1c36c8fa3fb0c09bf3ab30d6d0000670195ac40ee7fe91e?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="method-card-bg" />
+                        <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/1d89be6d95b62c922b3dc8001fc235def4892404c09163eb03eec816c867abba?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="method-card-icon" />
+                        <h3 class="method-card-title">Tailored Strategy</h3>
+                        <p class="method-card-text">We craft personalized content strategies aligned with your goals to engage your audience and drive results, whether it's brand awareness, sales, or thought leadership.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="method-card">
+            <div class="method-card-inner">
+                <div class="method-card-content">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/be5e7be37746c2530bd6584e75a8462b486806059621ff73146db5b6b2ef03d4?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="method-card-icon" />
+                    <h3 class="method-card-title">SEO-Friendly Content</h3>
+                    <p class="method-card-text">Our content is optimized for search engines, boosting your rankings and attracting more organic traffic while ensuring long-term visibility and growth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="expertise-section">
+    <div class="expertise-bg"></div>
+    <div class="expertise-content">
+        <div class="expertise-left">
+            <div class="expertise-intro">
+                <h2 class="expertise-brand">Content forge</h2>
+                <h3 class="expertise-title">Expert Solutions to Amplify Brand and Accelerate Growth</h3>
+            </div>
+            <div class="expertise-image-list">
+                <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/b99d4b3b5cc288caa00a109c92544686d83c675ab75cbb87241bd3cca943590b?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="expertise-image" />
+            </div>
+        </div>
+
+        <div class="expertise-list">
+            <div class="expertise-item">
+                <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/64e4a02f5e4d551fb7016b8881bbdd5fda3a47caf49ddfaf4888f281d544d7cb?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="expertise-icon" />
+                <div class="expertise-item-content">
+                    <h4 class="expertise-item-title">International SEO</h4>
+                    <p class="expertise-item-text">Our SEO services enhance your site's visibility through audits, optimization, and link building to attract more organic traffic.</p>
+                    <a href="#" class="expertise-item-link">Find out more</a>
+                </div>
+            </div>
+
+            <div class="expertise-item">
+                <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/e0f106e797d609d16d390a0b9a6deb1ff9f8d6e1284e278edfb5b5937f822f93?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="expertise-icon" />
+                <div class="expertise-item-content">
+                    <h4 class="expertise-item-title">Public Relations</h4>
+                    <p class="expertise-item-text">We manage media relations to build a strong brand image, increase awareness, and foster trust with your audience.</p>
+                    <a href="#" class="expertise-item-link">Find out more</a>
+                </div>
+            </div>
+
+            <div class="expertise-item">
+                <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/26b34c56c34502ce0c1fb9e00e31340ec3f87b1ba25632356f39703e2eb72a5b?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="expertise-icon" />
+                <div class="expertise-item-content">
+                    <h4 class="expertise-item-title">Localised Content</h4>
+                    <p class="expertise-item-text">We craft captivating blogs, articles, videos tailored to your audience, driving engagement and telling your brand's story.</p>
+                    <a href="#" class="expertise-item-link">Find out more</a>
+                </div>
+            </div>
+
+            <div class="expertise-item">
+                <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/fb5f56221c97ad628d6f1b620485296fa6f62d87425c86a2bd2f7f529bbcff5b?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="expertise-icon" />
+                <div class="expertise-item-content">
+                    <h4 class="expertise-item-title">Global Advertising</h4>
+                    <p class="expertise-item-text">We design data-driven ad campaigns on platforms like Google to maximize reach, boost ROI, and target the right audience.</p>
+                    <a href="#" class="expertise-item-link">Find out more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="welcome-section">
+    <div class="welcome-intro">
+        <p class="welcome-subtitle">Welcome to</p>
+        <h2 class="welcome-title">
+            <span>The world of</span>
+            <span>Localised Growth™</span>
+        </h2>
+    </div>
+
+    <div class="welcome-content">
+        <div class="welcome-columns">
+            <div class="welcome-column">
+                <div class="welcome-text">
+                    <div class="welcome-stat">
+                        <div class="stat-dot"></div>
+                        <div class="stat-content">
+                            <p class="stat-number">5</p>
+                            <p class="stat-label">Countries</p>
+                            <p class="stat-description">Working as one, sharing centralised tools and data so everything connects.</p>
+                            <p class="stat-detail">Serving clients across APAC and NAM, we tailor content to suit cultural nuances, fueling international growth and recognition.</p>
+                        </div>
+                    </div>
+                    <div class="welcome-stat">
+                        <div class="stat-dot"></div>
+                        <div class="stat-content">
+                            <p class="stat-number">20</p>
+                            <p class="stat-label">Experts & Advisors</p>
+                            <p class="stat-description">Across APAC, we bring local market knowledge to every campaign.</p>
+                            <p class="stat-detail">Our seasoned experts bring decades of experience, ensuring innovative and impactful strategies that drive business success.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome-image-column">
+                <div class="welcome-image-content">
+                    <div class="welcome-image-header">
+                        <div class="welcome-image-dot"></div>
+                        <p class="stat-number">8</p>
+                    </div>
+                    <div class="welcome-image-text">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/50c2ebad2b624b9deb29c7dd1dcc7ccdea7e152ce752089d41cdf972e1c83beb?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="welcome-image-bg" />
+                        <h3 class="welcome-image-title">Multi-Language Content</h3>
+                        <p class="welcome-image-description">Spoken natively in-house, so every word works for your target audience.</p>
+                        <p class="welcome-image-detail">We create content in multiple languages, helping you connect with diverse audiences and enhance global accessibility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="industries-section">
+    <div class="industries-content">
+        <div class="industries-image">
+            <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/2b5fb6f60f04705d261eddf2671d2752c7541987aa2d5e1d2e3cbf3796a53511?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="industries-img" />
+        </div>
+        <div class="industries-text">
+            <div class="industries-intro">
+                <div class="industries-title-wrapper">
+                    <h2 class="industries-title">Expanding Across Industries</h2>
+                    <p class="industries-subtitle">We craft tailored content strategies for industries like B2B, EdTech and more.</p>
+                    <p class="industries-description">Our expertise allows us to craft content strategies tailored to each sector's unique needs. By understanding the nuances of your industry, we deliver impactful content that drives results and resonates with your audience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="case-studies-section">
+    <h2 class="case-studies-title">Connecting Industries Through Customized Strategies</h2>
+    <div class="case-studies-list">
+        <div class="case-study-card">
+            <div class="case-study-content">
+                <div class="case-study-image-wrapper">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/d83bd6fcc0a245690a0afc0002f3441bb5ed0670399918f59536a85530ff8ddf?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="case-study-image" />
+                </div>
+                <div class="case-study-text">
+                    <div class="case-study-tag">
+                        <span class="case-study-tag-content">Food and Beverages</span>
+                    </div>
+                    <h3 class="case-study-title">Food Focus</h3>
+                    <p class="case-study-description">Learn how <strong>Content Forge</strong> Boost brand visibility with engaging, SEO-driven content that highlights your offerings and drives customer loyalty.</p>
+                    <a href="#" class="case-study-link">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-study-card">
+            <div class="case-study-content">
+                <div class="case-study-image-wrapper">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/733e1a7fbdbcf7fe4f1b6e97ad875bf22e57f8a69b3a6c58df43dc338a6870b5?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="case-study-image" />
+                </div>
+                <div class="case-study-text">
+                    <div class="case-study-tag">
+                        <span class="case-study-tag-content">EdTech</span>
+                    </div>
+                    <h3 class="case-study-title">Edtech Evolution</h3>
+                    <p class="case-study-description">Deliver educational value through personalized, interactive content that fosters engagement and supports student success.</p>
+                    <a href="#" class="case-study-link">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-study-card">
+            <div class="case-study-content">
+                <div class="case-study-image-wrapper">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/79337abb661fdf067034fdfe3f231fb3c6068b24ff775fe56979b36f4f0ce70a?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="case-study-image" />
+                </div>
+                <div class="case-study-text">
+                    <div class="case-study-tag">
+                        <span class="case-study-tag-content">B2B</span>
+                    </div>
+                    <h3 class="case-study-title">B2B Growth</h3>
+                    <p class="case-study-description">Strengthen partnerships with targeted, data-backed content that demonstrates expertise and nurtures long-term relationships.</p>
+                    <a href="#" class="case-study-link">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="see-more-button">See more</a>
+</section>
+
+<section class="contact-section">
+    <div class="contact-content">
+        <div class="contact-columns">
+            <div class="contact-text">
+                <div class="contact-text-content">
+                    <h2 class="contact-title">Let's talk</h2>
+                    <ul class="contact-list">
+                        <li class="contact-list-item">Content</li>
+                        <li class="contact-list-item">Paid</li>
+                        <li class="contact-list-item">SEO</li>
+                        <li class="contact-list-item">PR</li>
+                    </ul>
+                    <a href="#" class="contact-button">Contact us</a>
+                </div>
+            </div>
+            <div class="contact-image">
+                <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/c2e131db099bec7141f6d4289b93464ef5e0d97587810717e3c8479773dcf839?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="" class="contact-img" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-top">
+        <div class="footer-bg"></div>
+    </div>
+    <div class="footer-content">
+        <div class="footer-grid">
+            <div class="footer-row">
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <nav class="footer-menu">
+                            <h4 class="footer-menu-title">SEO</h4>
+                            <ul class="footer-menu-list">
+                                <li class="footer-menu-item">International SEO</li>
+                                <li class="footer-menu-item">SEO Audits</li>
+                                <li class="footer-menu-item">Website Redesigns</li>
+                                <li class="footer-menu-item">Digital website content</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-column">
+                        <nav class="footer-menu">
+                            <h4 class="footer-menu-title">Content</h4>
+                            <ul class="footer-menu-list">
+                                <li class="footer-menu-item">Podcast & Video</li>
+                                <li class="footer-menu-item">Copywriting</li>
+                                <li class="footer-menu-item">Social Media</li>
+                                <li class="footer-menu-item">Tone of Voice</li>
+                                <li class="footer-menu-item">Articles & Blogs</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-column">
+                        <nav class="footer-menu">
+                            <h4 class="footer-menu-title">PR</h4>
+                            <ul class="footer-menu-list">
+                                <li class="footer-menu-item">Digital PR</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-column">
+                        <nav class="footer-menu">
+                            <h4 class="footer-menu-title">Resources</h4>
+                            <ul class="footer-menu-list">
+                                <li class="footer-menu-item">Case Studies</li>
+                                <li class="footer-menu-item">
+                                    <a href="#" class="contact-button">Contact us</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-row">
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <nav class="footer-menu">
+                            <h4 class="footer-menu-title">Paid</h4>
+                            <ul class="footer-menu-list">
+                                <li class="footer-menu-item">International PPC</li>
+                                <li class="footer-menu-item">PPC Audits</li>
+                                <li class="footer-menu-item">Paid Social</li>
+                                <li class="footer-menu-item">Content</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-column">
+                        <nav class="footer-menu">
+                            <h4 class="footer-menu-title">Industries</h4>
+                            <ul class="footer-menu-list">
+                                <li class="footer-menu-item">B2B</li>
+                                <li class="footer-menu-item">EdTech</li>
+                                <li class="footer-menu-item">Food & Beverages</li>
+                                <li class="footer-menu-item">Real Estate</li>
+                                <li class="footer-menu-item">Ecommerce</li>
+                                <li class="footer-menu-item">Startups</li>
+                                <li class="footer-menu-item">Healthcare</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-column">
+                        <nav class="footer-menu">
+                            <h4 class="footer-menu-title">About us</h4>
+                            <ul class="footer-menu-list">
+                                <li class="footer-menu-item">The agency</li>
+                                <li class="footer-menu-item">R&D Department</li>
+                                <li class="footer-menu-item">Our Manifesto</li>
+                                <li class="footer-menu-item">Join Us</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-column">
+                        <div class="footer-newsletter">
+                            <h4 class="footer-newsletter-title">Subscribe to our Newsletter</h4>
+                            <form class="footer-newsletter-form">
+                                <div class="footer-newsletter-input">
+                                    <label for="newsletter-email" class="visually-hidden">Email address</label>
+                                    <input type="email" id="newsletter-email" placeholder="myemail@gmail.com" aria-label="Enter your email address" />
+                                    <button type="submit" class="footer-newsletter-button">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/4269ad6f7bf5bf70c7837a21207f4a3c04c4a1893faee39434bfc91e75b04fc3?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="Submit" />
+                      </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="footer-locations">
+            <li>INDIA</li>
+            <li>USA</li>
+            <li>LONDON</li>
+            <li>SINGAPORE</li>
+            <li>HONG KONG</li>
+        </ul>
+    </div>
+    <nav class="footer-bottom">
+        <ul class="footer-links">
+            <li><a href="#">Legal notice</a></li>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+        </ul>
+    </nav>
+    <img src="https://cdn.builder.io/api/v1/image/assets/379465ba6b4245bfa787741f009c0b13/c007ddbfa0e7b694a006d9e464a58b4121277b8534c35681b8567ad69e6163fd?apiKey=379465ba6b4245bfa787741f009c0b13&" alt="Content Forge Logo" class="footer-logo" />
+</footer>
